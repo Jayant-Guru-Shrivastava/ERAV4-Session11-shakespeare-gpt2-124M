@@ -101,7 +101,7 @@ class GPT(nn.Module):
         self.wte = nn.Embedding(config.vocab_size, config.n_embd)  # token embeddings
         self.wpe = nn.Embedding(config.block_size, config.n_embd)  # position embeddings
 
-        self.drop = nn.Dropout(0.1)
+        self.drop = nn.Dropout(0.0)
 
         self.h = nn.ModuleList([Block(config) for _ in range(config.n_layer)])
         self.ln_f = nn.LayerNorm(config.n_embd)
