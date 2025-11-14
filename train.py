@@ -16,7 +16,7 @@ def main():
     # hyperparameters (tune if needed)
     B = 8
     T = 256
-    learning_rate = 3e-4
+    learning_rate = 1e-4
     max_steps = 20000          # you can stop early when loss < target
     log_interval = 10
     target_loss = 0.099999
