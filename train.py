@@ -43,7 +43,11 @@ def main():
     model = GPT(config).to(device)
     print("Number of parameters:", sum(p.numel() for p in model.parameters()) / 1e6, "M")
 
-    optimizer = torch.optim.AdamW(model.parameters(), lr=learning_rate)
+    optimizer = torch.optim.AdamW(
+        model.parameters(),
+        lr=learning_rate,
+        weight_decay=0.0,  # no L2 regularization
+    )
 
     # training loop
     step = 0
