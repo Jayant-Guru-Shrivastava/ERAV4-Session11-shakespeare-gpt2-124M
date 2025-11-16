@@ -153,20 +153,6 @@ screenshots/hf_space.png
 
 ---
 
-## 📑 Files You Should Commit to GitHub
-
-- ✅ Code: `model.py`, `data.py`, `train.py`, `app.py`, `requirements.txt`
-- ✅ Data stub: `input.txt` (if allowed by assignment)
-- ✅ Logs: `logs/train.log`
-- ✅ Samples: `sample_output.txt`
-- ✅ Screenshot: `screenshots/hf_space.png`
-- ✅ This `README.md`
-
-**Do not commit**:
-- ❌ `checkpoints/shakespeare-gpt2-124M.pt` (too large for GitHub; keep it in HF Space)
-
----
-
 ## 🛠️ Troubleshooting
 
 - **Loss doesn’t go down:** make sure dropout is `0.0` and AdamW `weight_decay=0.0`. Let it run for enough steps (thousands). LR `1e-4` is a good long‑run value.
@@ -186,3 +172,4 @@ This project uses a minimal GPT‑2‑style decoder‑only architecture and the 
 - [x] Loss `< 0.099999` achieved (`0.094433`)
 - [x] GitHub repo with logs + sample outputs + screenshot + README
 - [x] HF Space live demo with uploaded weights
+
